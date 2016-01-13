@@ -10,7 +10,9 @@ var users = require('./routes/users');
 
 var app = express();
 var mongoose = require('mongoose');
+var passport = require('passport');
 
+app.use(passport.initialize());
 
 mongoose.connect('mongodb://localhost/news');
 // view engine setup
